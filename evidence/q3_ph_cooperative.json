@@ -1,0 +1,173 @@
+{
+  "kind": "synthetic TTS customer -> real local ASR -> real agent -> TTS reply; not a human call",
+  "market": "ph",
+  "regional_accent": null,
+  "rows": [
+    {
+      "speaker": "agent",
+      "text": "Magandang araw po. AI assistant ito para sa kathang-isip na Bayan Life demo. Hindi ito totoong insurance offer. Puwede po ba tayong mag-usap tungkol sa premium reminder?",
+      "citations": [
+        {
+          "record_id": "ph_intro-1",
+          "source": "sources/ph_intro.txt#chunk-1",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "reference": "Opo, sige po.",
+      "asr": {
+        "text": "Opo, si Gipo.",
+        "confidence": 0.466,
+        "segments": [
+          {
+            "text": "Opo, si Gipo.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.7646007429469716,
+            "no_speech_prob": 0.046998072415590286
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 643.2568000018364
+      },
+      "word_error_rate": 0.667,
+      "expected_topic": "product",
+      "actual_record": "ph_product-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Sa demo account, dalawang libong piso ang premium, due sa ikalabinlima ng Oktubre, dalawang libo dalawampu at anim. Halimbawa lang ito. Sa totoong tawag, kailangan munang kumpirmahin ang pagkakakilanlan bago sabihin ang detalye ng policy.",
+      "citations": [
+        {
+          "record_id": "ph_product-1",
+          "source": "sources/ph_product.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Ano po ang beneficiary at rider sa policy?",
+      "asr": {
+        "text": "Ano po ang beneficiary at rider sa policy.",
+        "confidence": 0.619,
+        "segments": [
+          {
+            "text": "Ano po ang beneficiary at rider sa policy.",
+            "start": 0.0,
+            "end": 3.0,
+            "avg_logprob": -0.48014079672949656,
+            "no_speech_prob": 0.004209628328680992
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 669.7221999929752
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "faq",
+      "actual_record": "ph_faq-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Ang beneficiary ang taong nakapangalan para tumanggap ng benepisyo ayon sa policy. Ang rider ay dagdag na coverage na may sariling terms. Ang bank referral ay pagpapakilala sa adviser; hindi ito garantiya ng approval.",
+      "citations": [
+        {
+          "record_id": "ph_faq-1",
+          "source": "sources/ph_faq.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Medyo mahal po, wala akong pambayad ngayon.",
+      "asr": {
+        "text": "May jumahalpo wala akong pambayat na yun.",
+        "confidence": 0.525,
+        "segments": [
+          {
+            "text": "May jumahalpo wala akong pambayat na yun.",
+            "start": 0.0,
+            "end": 2.8,
+            "avg_logprob": -0.6439530342817307,
+            "no_speech_prob": 0.014743301086127758
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 707.0903999992879
+      },
+      "word_error_rate": 0.857,
+      "expected_topic": "objection",
+      "actual_record": "ph_fallback-1",
+      "passed": false
+    },
+    {
+      "speaker": "agent",
+      "text": "Pasensya po, wala akong kumpirmadong impormasyon tungkol diyan. Puwede ko pong itala na gusto ninyong makausap ang policy team.",
+      "citations": [
+        {
+          "record_id": "ph_fallback-1",
+          "source": "sources/ph_fallback.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Puwede po bang makausap ang tao?",
+      "asr": {
+        "text": "Pudipubang makausapang tao.",
+        "confidence": 0.545,
+        "segments": [
+          {
+            "text": "Pudipubang makausapang tao.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.6074183305104573,
+            "no_speech_prob": 0.019198056310415268
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 696.5730999945663
+      },
+      "word_error_rate": 0.833,
+      "expected_topic": "human",
+      "actual_record": "ph_human-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Sige po. Naitala ang request ninyo para sa policy team sa demo. Wala pang totoong adviser na nakakonekta.",
+      "citations": [
+        {
+          "record_id": "ph_human-1",
+          "source": "sources/ph_human.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    }
+  ],
+  "actions": [
+    {
+      "type": "human_escalation",
+      "mock": true,
+      "status": "requested_not_connected"
+    }
+  ]
+}

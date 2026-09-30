@@ -1,0 +1,48 @@
+{
+  "asr_ms": {
+    "p50": 662.5700500007952,
+    "p95": 1295.390209996548,
+    "samples": 12
+  },
+  "signal_ms": {
+    "p50": 0.02625000342959538,
+    "p95": 0.520439996034838,
+    "samples": 12
+  },
+  "llm_ms": {
+    "p50": 0.0,
+    "p95": 0.0,
+    "samples": 12
+  },
+  "delivery_and_http_ms": {
+    "p50": 10.106549991178326,
+    "p95": 11.374205000902293,
+    "samples": 12
+  },
+  "receive_to_display_ms": {
+    "p50": 673.2961499947123,
+    "p95": 1307.9287950022253,
+    "samples": 12
+  },
+  "chunk_start_to_display_ms": {
+    "p50": 4670.705699994869,
+    "p95": 5320.188109999434,
+    "samples": 12
+  },
+  "definitions": {
+    "asr_ms": "Includes queueing for the local speech model; includes cold start if present.",
+    "receive_to_display_ms": "Complete chunk sent by replay client to response parsed in CLI. Not a browser paint time.",
+    "chunk_start_to_display_ms": "Includes four-second capture buffer and any server queueing.",
+    "llm_ms": "Zero because rules, not an LLM, produce alerts."
+  },
+  "false_positive_audio_checks": [
+    {
+      "file": "q4_negative.wav",
+      "nudges": 0
+    },
+    {
+      "file": "q4_noise.wav",
+      "nudges": 0
+    }
+  ]
+}

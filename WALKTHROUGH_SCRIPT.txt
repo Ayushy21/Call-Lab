@@ -1,0 +1,21 @@
+Use this as a guide. Explain the code in your own words and do not claim native-speaker testing.
+
+1. Open the app.
+This is my local assessment demo. Since no business documents were supplied, I used fictional rules. The system has a shared knowledge base, three call flows, and a live alert panel.
+
+2. Show the English call.
+I chose candidate screening for Question 1. Say yes, then confirm a Python project, then give 25 hours. The bot checks the rules from the knowledge base. Now change that to 10 hours. It asks for confirmation before changing the answer. Ask about the weather, then ask for a human. The bot does not make up an answer or pretend a person is connected.
+
+3. Show the search box and a source file.
+Ask about eligibility, stipend, remote work, and lack of experience. Every answer has a source and version. The sample data includes text, HTML, PDF and a table. The ingestion report shows rejected and duplicate sources. I used lexical search because the approved demo data is small. I did not add a vector database without a need.
+
+4. Show both local-market calls.
+The Philippines flow uses po, pesos, local dates and policy terms. It accepts Taglish. English is an explicit option. The Indonesian flow uses cicilan, tenor, denda and DP. Callback times must include WIB, WITA or WIT. These are not live policies. The recordings are synthetic, and some speech recognition errors remain. A Javanese TTS voice is only an accent stress test, not real native-speaker proof.
+
+5. Show live audio.
+Start a new English session. Select Customer, allow audio processing, and replay q4_customer.wav. The file is sent in four-second chunks at normal speed. Watch the transcript and alerts appear before the recording ends. Then select Agent and replay q4_agent.wav for the compliance example. Replay q4_negative.wav and q4_noise.wav to show where alerts should be suppressed.
+
+6. Show evidence and limits.
+Open latency_report.json and voice_summary.json. Explain which time includes the four-second buffer. The alert logic does not use an LLM, so its LLM time is zero. The small CPU speech model and simple rules are not enough for a real launch. I would first get approved source material, real native-speaker recordings, better speech tests, authentication and shared session storage.
+
+The included walkthrough.webm is an automated silent screen recording. Record your own spoken walkthrough after you have run and understood the app.

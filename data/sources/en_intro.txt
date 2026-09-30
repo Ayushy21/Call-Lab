@@ -1,0 +1,1 @@
+This is a demo AI assistant for the fictional PracticeWorks internship. This is not a real job offer. May I ask two screening questions? Your answers stay in this local session.

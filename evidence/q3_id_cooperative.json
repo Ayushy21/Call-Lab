@@ -1,0 +1,173 @@
+{
+  "kind": "synthetic TTS customer -> real local ASR -> real agent -> TTS reply; not a human call",
+  "market": "id",
+  "regional_accent": "Not tested; Indonesian colloquial words use a standard synthetic voice.",
+  "rows": [
+    {
+      "speaker": "agent",
+      "text": "Selamat pagi. Saya asisten AI untuk demo pembiayaan Nusantara yang fiktif. Ini bukan tagihan sungguhan. Boleh saya lanjutkan pengingat cicilan dalam demo ini?",
+      "citations": [
+        {
+          "record_id": "id_intro-1",
+          "source": "sources/id_intro.txt#chunk-1",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "reference": "Iya, boleh lanjut.",
+      "asr": {
+        "text": "Iya, boleh lanjut.",
+        "confidence": 0.73,
+        "segments": [
+          {
+            "text": "Iya, boleh lanjut.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.3148792054918077,
+            "no_speech_prob": 0.009961437433958054
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 633.0442000034964
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "product",
+      "actual_record": "id_product-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Dalam akun contoh, angsuran lima ratus ribu rupiah jatuh tempo tanggal lima belas Oktober dua ribu dua puluh enam. Tenor contoh adalah dua belas bulan. Dalam layanan sungguhan, identitas harus diperiksa sebelum rincian akun dibahas.",
+      "citations": [
+        {
+          "record_id": "id_product-1",
+          "source": "sources/id_product.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Apa itu DP dan tenor?",
+      "asr": {
+        "text": "Apa itu depan dan tenor?",
+        "confidence": 0.714,
+        "segments": [
+          {
+            "text": "Apa itu depan dan tenor?",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.3366572748530995,
+            "no_speech_prob": 0.00023792627325747162
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 672.582400002284
+      },
+      "word_error_rate": 0.2,
+      "expected_topic": "faq",
+      "actual_record": "id_faq-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "DP adalah uang muka. Tenor adalah lama pembiayaan. Untuk pembayaran sungguhan, gunakan kanal resmi pada perjanjian atau aplikasi penyedia. Demo ini tidak memiliki rekening pembayaran.",
+      "citations": [
+        {
+          "record_id": "id_faq-1",
+          "source": "sources/id_faq.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Berapa denda kalau terlambat?",
+      "asr": {
+        "text": "berapa dindah kalau terlambat?",
+        "confidence": 0.733,
+        "segments": [
+          {
+            "text": "berapa dindah kalau terlambat?",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.310027865426881,
+            "no_speech_prob": 0.0018824246944859624
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 660.5355000065174
+      },
+      "word_error_rate": 0.25,
+      "expected_topic": "policy",
+      "actual_record": "id_policy-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Besaran denda dan masa tenggang tidak tersedia dalam aturan demo. Saya tidak boleh menebak atau menjanjikan penghapusan denda. Petugas perlu memeriksa perjanjian pembiayaan Anda.",
+      "citations": [
+        {
+          "record_id": "id_policy-1",
+          "source": "sources/id_policy.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Saya mau bicara dengan petugas.",
+      "asr": {
+        "text": "Saya mau bicara dengan petugas.",
+        "confidence": 0.789,
+        "segments": [
+          {
+            "text": "Saya mau bicara dengan petugas.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.2369175006945928,
+            "no_speech_prob": 0.0005800051148980856
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 668.3366999932332
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "human",
+      "actual_record": "id_human-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Baik, permintaan bantuan petugas sudah dicatat dalam demo. Belum ada petugas sungguhan yang tersambung.",
+      "citations": [
+        {
+          "record_id": "id_human-1",
+          "source": "sources/id_human.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    }
+  ],
+  "actions": [
+    {
+      "type": "human_escalation",
+      "mock": true,
+      "status": "requested_not_connected"
+    }
+  ]
+}

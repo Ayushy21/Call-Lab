@@ -1,0 +1,45 @@
+{
+  "disclosure": "Synthetic narrator; automated recording of actual running UI. Not the candidate voice.",
+  "sections": [
+    {
+      "section": "overview",
+      "start_seconds": 0.0609375,
+      "text": "This is Call Lab, a local assessment prototype. This walkthrough uses synthetic narration. Only the assessment PDF was supplied, so the business rules and accounts are fictional. Speech goes through local Whisper, then the conversation state and shared knowledge base. Answers come from approved records. A separate rule engine shows live call alerts."
+    },
+    {
+      "section": "screen",
+      "start_seconds": 29.102125,
+      "text": "The English flow screens a candidate. It asks permission, checks for a Python project, and asks about weekly hours. Changing an earlier number requires confirmation. An unrelated question gets a fallback. A human request creates a local demo action, not a real transfer. The source record is shown below each answer."
+    },
+    {
+      "section": "kb",
+      "start_seconds": 56.202625,
+      "text": "The same knowledge base supports the search box and the voice flow. It contains text, HTML, PDF and table sources. Each record has a version, source reference, and category. The index uses lexical scoring and keywords, not embeddings. Duplicate and unapproved sources are excluded. The full retrieval report includes expected topics and actual results."
+    },
+    {
+      "section": "ph",
+      "start_seconds": 87.516625,
+      "text": "The Philippines flow uses a Filipino voice and accepts Taglish. It uses pesos, polite wording, and familiar insurance terms. The caller can request English. Unknown policy information stays unknown. The saved calls use synthetic customers and real speech recognition, with errors kept in the transcript."
+    },
+    {
+      "section": "id",
+      "start_seconds": 113.6509375,
+      "text": "The Indonesian flow uses cicilan, tenor, denda and D P. Callback times need a local time zone. The bot does not promise fee waivers. A Javanese synthetic voice was used for a separate stress test. That is only a proxy. It does not replace a real regional speaker or native language review."
+    },
+    {
+      "section": "live",
+      "start_seconds": 138.827625,
+      "text": "This is actual audio replay at normal speed. Each four second chunk goes to speech recognition only after its audio time has elapsed. The customer mentions a second vehicle. The dashboard suggests asking about a separate quote. A later frustration signal asks the agent to acknowledge the concern. Alerts appear while the sample call is still running. The counters show measured speech and total processing time."
+    },
+    {
+      "section": "compliance",
+      "start_seconds": 172.3616875,
+      "text": "Now the selected channel is the agent. The audio includes a promise of guaranteed approval and a payment request without the demo disclosure. The system raises compliance alerts. It does not take a financial action. Priorities, cooldowns and expiry reduce repeated alerts."
+    },
+    {
+      "section": "limits",
+      "start_seconds": 195.3513125,
+      "text": "The report separates speech time, rule time, delivery, and total time. It also includes the four second capture buffer. There is no language model in the alert path, so that component is zero. Before real use, this needs approved source material, native speaker tests, authentication, better noisy audio recognition, shared state and more speech workers. This is a working prototype with known gaps, not a production launch."
+    }
+  ]
+}

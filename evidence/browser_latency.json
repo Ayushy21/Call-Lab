@@ -1,0 +1,95 @@
+[
+  {
+    "signal_ms": 0.049299997044727206,
+    "llm_ms": 0,
+    "llm_used": false,
+    "asr_ms": 899.1613000107463,
+    "server_ms": 900.025299997651,
+    "sequence": 0,
+    "chunk_ms": 4000,
+    "queue_ms": 0.5,
+    "delivery_and_http_ms": 25.874700008309446,
+    "receive_to_display_ms": 926.4000000059605,
+    "chunk_start_to_display_ms": 4941.70000000298,
+    "transcript": "I have a second vehicle to ensure I would line",
+    "nudges": [
+      {
+        "id": "9e3cdd7a60da4d198804f5bb485f17cd",
+        "signal": "second_vehicle",
+        "topic": "opportunity",
+        "priority": 3,
+        "text": "Ask whether they want a separate quote for the second vehicle. Do not invent a discount.",
+        "confidence": 0.9,
+        "expires_after_seconds": 20,
+        "created_monotonic": 104726.5
+      }
+    ]
+  },
+  {
+    "signal_ms": 0.056599994422867894,
+    "llm_ms": 0,
+    "llm_used": false,
+    "asr_ms": 898.1285000045318,
+    "server_ms": 898.8875000068219,
+    "sequence": 1,
+    "chunk_ms": 4000,
+    "queue_ms": 0.3999999910593033,
+    "delivery_and_http_ms": 23.312499996158294,
+    "receive_to_display_ms": 922.5999999940395,
+    "chunk_start_to_display_ms": 4926.29999999702,
+    "transcript": "to know the next step. I am frustrated.",
+    "nudges": [
+      {
+        "id": "1305ff6b55e6451bb09a928d09ee16d4",
+        "signal": "frustration",
+        "topic": "sentiment",
+        "priority": 2,
+        "text": "Acknowledge the concern. Ask what is still unresolved before continuing.",
+        "confidence": 0.88,
+        "expires_after_seconds": 20,
+        "created_monotonic": 104730.484
+      }
+    ]
+  },
+  {
+    "signal_ms": 0.028299997211433947,
+    "llm_ms": 0,
+    "llm_used": false,
+    "asr_ms": 853.8804999989225,
+    "server_ms": 854.5174000028055,
+    "sequence": 2,
+    "chunk_ms": 4000,
+    "queue_ms": 0.5999999940395355,
+    "delivery_and_http_ms": 28.38260000315495,
+    "receive_to_display_ms": 883.5,
+    "chunk_start_to_display_ms": 4891,
+    "transcript": "This is the third time I have called. Please",
+    "nudges": []
+  },
+  {
+    "signal_ms": 0.05299999611452222,
+    "llm_ms": 0,
+    "llm_used": false,
+    "asr_ms": 744.279300008202,
+    "server_ms": 744.7680999903241,
+    "sequence": 3,
+    "chunk_ms": 2112,
+    "queue_ms": 0.09999999403953552,
+    "delivery_and_http_ms": 14.83190001861658,
+    "receive_to_display_ms": 759.7000000029802,
+    "chunk_start_to_display_ms": 2884.4000000059605,
+    "transcript": "Call me back tomorrow.",
+    "nudges": [
+      {
+        "id": "0a9940c724024f2baf9f62ade198457d",
+        "signal": "callback",
+        "topic": "follow_up",
+        "priority": 3,
+        "text": "Confirm a callback date, time, and timezone. Ask permission before saving it.",
+        "confidence": 0.9,
+        "expires_after_seconds": 20,
+        "created_monotonic": 104736.437
+      }
+    ]
+  }
+]

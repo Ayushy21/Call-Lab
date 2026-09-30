@@ -1,0 +1,1 @@
+Sige po, naitala ang callback request sa demo. Pakikumpirma sa tao ang araw, oras, at Philippine time. Hindi pa ito totoong booking.

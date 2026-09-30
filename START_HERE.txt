@@ -1,0 +1,22 @@
+DARWIX ASSESSMENT - AYUSH YADAV
+
+1. Read ANSWERS.pdf or ANSWERS.txt. The explanations use simple English.
+2. Follow README.md to run the app at http://127.0.0.1:8765.
+3. Open evidence/narrated_walkthrough.mp4 for the automated demo with disclosed synthetic narration.
+4. Open evidence/q1_*.wav for the three English call tests.
+5. Open evidence/q3_*.wav for two Filipino and two Indonesian call tests.
+6. Read matching JSON files for actual speech recognition, source citations and failures.
+7. Read evidence/latency_report.json and live_audio_results.json for measured real-time audio results.
+8. Run the tests using the README commands.
+
+IMPORTANT BEFORE SUBMITTING
+
+The code is a working local prototype. All source businesses, rules and accounts are fictional because no business material was provided. Test callers and the video narrator are synthetic voices, not real customers or Ayush's voice.
+
+Real native-speaker and regional-accent validation is still missing. The Javanese TTS probe does not replace it. The small speech model has known errors. No real payment, callback, job offer or human connection takes place.
+
+Use WALKTHROUGH_SCRIPT.txt to prepare your own explanation after trying the app. Do not say you ran real customer tests or have native-language expertise. If asked, explain that AI tools helped build this prototype and be ready to discuss the code.
+
+The local project is prepared for a GitHub repository. No public GitHub repository has been created or pushed. Upload the contents of submission.zip to your own repository after review; never upload .env, .venv or runtime caches.
+
+The zip contains source, setup files, written answers, evidence and video. It excludes secrets and installed packages.

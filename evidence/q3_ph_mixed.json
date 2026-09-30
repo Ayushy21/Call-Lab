@@ -1,0 +1,173 @@
+{
+  "kind": "synthetic TTS customer -> real local ASR -> real agent -> TTS reply; not a human call",
+  "market": "ph",
+  "regional_accent": null,
+  "rows": [
+    {
+      "speaker": "agent",
+      "text": "Magandang araw po. AI assistant ito para sa kathang-isip na Bayan Life demo. Hindi ito totoong insurance offer. Puwede po ba tayong mag-usap tungkol sa premium reminder?",
+      "citations": [
+        {
+          "record_id": "ph_intro-1",
+          "source": "sources/ph_intro.txt#chunk-1",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "reference": "Yes, okay po.",
+      "asr": {
+        "text": "Yes, ok po.",
+        "confidence": 0.536,
+        "segments": [
+          {
+            "text": "Yes, ok po.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.6230046525597572,
+            "no_speech_prob": 0.033703263849020004
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 668.8589000114007
+      },
+      "word_error_rate": 0.333,
+      "expected_topic": "product",
+      "actual_record": "ph_product-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Sa demo account, dalawang libong piso ang premium, due sa ikalabinlima ng Oktubre, dalawang libo dalawampu at anim. Halimbawa lang ito. Sa totoong tawag, kailangan munang kumpirmahin ang pagkakakilanlan bago sabihin ang detalye ng policy.",
+      "citations": [
+        {
+          "record_id": "ph_product-1",
+          "source": "sources/ph_product.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "What happens sa coverage kung late ang premium?",
+      "asr": {
+        "text": "wad hapen sa coverage kung late ang premium.",
+        "confidence": 0.482,
+        "segments": [
+          {
+            "text": "wad hapen sa coverage kung late ang premium.",
+            "start": 0.0,
+            "end": 3.0,
+            "avg_logprob": -0.7293585325990405,
+            "no_speech_prob": 0.007797349244356155
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 705.6190000002971
+      },
+      "word_error_rate": 0.25,
+      "expected_topic": "policy",
+      "actual_record": "ph_policy-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Kung late ang premium, huwag munang ipagpalagay na lapsed na ang policy. Wala tayong approved grace period o lapse date sa demo. Ipapasuri po natin sa policy team ang coverage at susunod na hakbang.",
+      "citations": [
+        {
+          "record_id": "ph_policy-1",
+          "source": "sources/ph_policy.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Busy ako, tawag na lang mamaya.",
+      "asr": {
+        "text": "Bisi ako tavod nalang mamaya.",
+        "confidence": 0.566,
+        "segments": [
+          {
+            "text": "Bisi ako tavod nalang mamaya.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.5687163046428135,
+            "no_speech_prob": 0.03957240283489227
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 713.4536999947159
+      },
+      "word_error_rate": 0.667,
+      "expected_topic": "callback",
+      "actual_record": "ph_callback-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Sige po, naitala ang callback request sa demo. Pakikumpirma sa tao ang araw, oras, at Philippine time. Hindi pa ito totoong booking.",
+      "citations": [
+        {
+          "record_id": "ph_callback-1",
+          "source": "sources/ph_callback.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Ano ang weather bukas?",
+      "asr": {
+        "text": "ano ang weather bukas.",
+        "confidence": 0.687,
+        "segments": [
+          {
+            "text": "ano ang weather bukas.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.37526798248291016,
+            "no_speech_prob": 0.004203008487820625
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "tl",
+        "asr_ms": 662.9065999877639
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "fallback",
+      "actual_record": "ph_fallback-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Pasensya po, wala akong kumpirmadong impormasyon tungkol diyan. Puwede ko pong itala na gusto ninyong makausap ang policy team.",
+      "citations": [
+        {
+          "record_id": "ph_fallback-1",
+          "source": "sources/ph_fallback.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    }
+  ],
+  "actions": [
+    {
+      "type": "callback_request",
+      "mock": true,
+      "status": "time_requires_human_confirmation"
+    }
+  ]
+}

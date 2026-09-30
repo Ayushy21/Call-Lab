@@ -1,0 +1,123 @@
+{
+  "kind": "Synthetic regional-language voice stress test",
+  "customer_voice": "jv-ID-DimasNeural",
+  "asr_language": "id",
+  "warning": "This is a Javanese TTS voice reading mixed Indonesian/Javanese text. It is only an accent proxy. No native speaker validated it. It does not establish performance on real regional Indonesian accents.",
+  "rows": [
+    {
+      "reference": "Iya, monggo. Saya belum bisa bayar cicilan sekarang.",
+      "asr": {
+        "text": "yo, munggu soyo belum bisa bayar cijilan sekarang",
+        "confidence": 0.567,
+        "segments": [
+          {
+            "text": "yo, munggu",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.5681142032146453,
+            "no_speech_prob": 0.003945144359022379
+          },
+          {
+            "text": "soyo belum bisa bayar cijilan sekarang",
+            "start": 2.0,
+            "end": 5.0,
+            "avg_logprob": -0.5681142032146453,
+            "no_speech_prob": 0.003945144359022379
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 1785.220499994466
+      },
+      "wer": 0.5,
+      "reply": {
+        "text": "Baik, saya paham cicilannya sedang terasa berat. Saya bisa mencatat permintaan bantuan petugas. Saya tidak bisa menjanjikan perubahan tenor atau penghapusan denda.",
+        "voice_market": "id",
+        "citations": [
+          {
+            "record_id": "id_objection-1",
+            "source": "sources/id_objection.txt#chunk-1",
+            "version": "1.0"
+          }
+        ],
+        "stage": "discussion",
+        "slots": {},
+        "actions": [],
+        "session_id": "2c33e98ac874479bad2a352a037e35ac"
+      }
+    },
+    {
+      "reference": "Mas, angsurannya jatuh tempo kapan?",
+      "asr": {
+        "text": "Mas, angsurannya jatuh tembukapan.",
+        "confidence": 0.533,
+        "segments": [
+          {
+            "text": "Mas, angsurannya jatuh tembukapan.",
+            "start": 0.0,
+            "end": 3.0,
+            "avg_logprob": -0.6291873595293831,
+            "no_speech_prob": 0.006862030830234289
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 686.7303999897558
+      },
+      "wer": 0.4,
+      "reply": {
+        "text": "Maaf, informasi itu belum tersedia di aturan demo. Saya bisa mencatat permintaan agar petugas membantu.",
+        "voice_market": "id",
+        "citations": [
+          {
+            "record_id": "id_fallback-1",
+            "source": "sources/id_fallback.txt#chunk-1",
+            "version": "1.0"
+          }
+        ],
+        "stage": "discussion",
+        "slots": {},
+        "actions": [],
+        "session_id": "2c33e98ac874479bad2a352a037e35ac"
+      }
+    },
+    {
+      "reference": "Saya mau bicara dengan petugas.",
+      "asr": {
+        "text": "soya mau picarar dengan petukas.",
+        "confidence": 0.505,
+        "segments": [
+          {
+            "text": "soya mau picarar dengan petukas.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.6840145885944366,
+            "no_speech_prob": 0.00014261400792747736
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 677.6128999918001
+      },
+      "wer": 0.6,
+      "reply": {
+        "text": "Maaf, informasi itu belum tersedia di aturan demo. Saya bisa mencatat permintaan agar petugas membantu.",
+        "voice_market": "id",
+        "citations": [
+          {
+            "record_id": "id_fallback-1",
+            "source": "sources/id_fallback.txt#chunk-1",
+            "version": "1.0"
+          }
+        ],
+        "stage": "discussion",
+        "slots": {},
+        "actions": [],
+        "session_id": "2c33e98ac874479bad2a352a037e35ac"
+      }
+    }
+  ]
+}

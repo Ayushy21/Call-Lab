@@ -1,0 +1,21 @@
+{
+  "records": 41,
+  "issues": [
+    {
+      "source": "sources/duplicate.txt",
+      "reason": "Duplicate of en_product-1"
+    },
+    {
+      "source": "sources/conflicting.txt",
+      "reason": "Unapproved or conflicting source quarantined"
+    },
+    {
+      "source": "sources/empty.pdf",
+      "reason": "Failed to open file 'C:\\\\Users\\\\asus\\\\OneDrive\\\\Desktop\\\\RESUMEDETI\\\\Darwix\\\\data\\\\sources\\\\empty.pdf' as type pdf."
+    },
+    {
+      "source": "sources/missing.txt",
+      "reason": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\asus\\\\OneDrive\\\\Desktop\\\\RESUMEDETI\\\\Darwix\\\\data\\\\sources\\\\missing.txt'"
+    }
+  ]
+}

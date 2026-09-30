@@ -1,0 +1,2 @@
+Name: Example Person; Email: sample@example.invalid; Phone: +91 90000 00000
+Preferred contact: email

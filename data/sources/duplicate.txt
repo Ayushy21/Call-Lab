@@ -1,0 +1,1 @@
+PracticeWorks is a fictional Python internship used only for this assessment. The work includes small APIs, tests, and documentation. There is no real opening or salary offer.

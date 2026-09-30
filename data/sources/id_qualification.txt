@@ -1,0 +1,1 @@
+Persetujuan pembiayaan perlu pemeriksaan oleh petugas. Bot tidak boleh menjamin persetujuan atau meminta PIN, OTP, dan kata sandi.

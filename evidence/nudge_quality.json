@@ -1,0 +1,193 @@
+{
+  "kind": "text-only labelled rule tests; not an audio accuracy claim",
+  "cases": [
+    {
+      "text": "I have a second vehicle to insure",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": "second_vehicle",
+      "predicted": [
+        "second_vehicle"
+      ],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.6854000093881041,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "Please pay now to proceed",
+      "speaker": "agent",
+      "asr_confidence": 1,
+      "expected": "missing_disclosure",
+      "predicted": [
+        "missing_disclosure"
+      ],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.3268000000389293,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "Your approval is guaranteed",
+      "speaker": "agent",
+      "asr_confidence": 1,
+      "expected": "risky_promise",
+      "predicted": [
+        "risky_promise"
+      ],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.07910000567790121,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "I am frustrated, this is the third time",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": "frustration",
+      "predicted": [
+        "frustration"
+      ],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.06340000254567713,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "I cannot pay this month",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": "payment_difficulty",
+      "predicted": [
+        "payment_difficulty"
+      ],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.009100011084228754,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "Please call me back tomorrow",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": "callback",
+      "predicted": [
+        "callback"
+      ],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.007299997378140688,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "I am ready to proceed",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": "buying_signal",
+      "predicted": [
+        "buying_signal"
+      ],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.006000002031214535,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "I do not have a second vehicle",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": null,
+      "predicted": [],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.0047000066842883825,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "Approval is not guaranteed",
+      "speaker": "agent",
+      "asr_confidence": 1,
+      "expected": null,
+      "predicted": [],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.0033999967854470015,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "I am not angry",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": null,
+      "predicted": [],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.0039000005926936865,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "The weather is nice today",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": null,
+      "predicted": [],
+      "passed": true,
+      "metrics": {
+        "signal_ms": 0.0043000036384910345,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "I have a second vehicle",
+      "speaker": "customer",
+      "asr_confidence": 0.2,
+      "expected": null,
+      "predicted": [],
+      "passed": true,
+      "metrics": {
+        "reason": "low_confidence_or_too_short",
+        "signal_ms": 0.000400003045797348,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    },
+    {
+      "text": "Hmm",
+      "speaker": "customer",
+      "asr_confidence": 1,
+      "expected": null,
+      "predicted": [],
+      "passed": true,
+      "metrics": {
+        "reason": "low_confidence_or_too_short",
+        "signal_ms": 0.000700005330145359,
+        "llm_ms": 0.0,
+        "llm_used": false
+      }
+    }
+  ],
+  "false_positives": 0,
+  "negative_cases": 6,
+  "false_negatives": 0
+}

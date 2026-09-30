@@ -1,0 +1,250 @@
+{
+  "kind": "synthetic TTS customer -> real local ASR -> real agent -> TTS reply; not a human call",
+  "market": "en",
+  "regional_accent": null,
+  "rows": [
+    {
+      "speaker": "agent",
+      "text": "This is a demo AI assistant for the fictional PracticeWorks internship. This is not a real job offer. May I ask two screening questions? Your answers stay in this local session.",
+      "citations": [
+        {
+          "record_id": "en_intro-1",
+          "source": "sources/en_intro.txt#chunk-1",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "reference": "Yes, okay.",
+      "asr": {
+        "text": "Yes, ok.",
+        "confidence": 0.487,
+        "segments": [
+          {
+            "text": "Yes, ok.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.7193345853260585,
+            "no_speech_prob": 0.048160165548324585
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 591.4954999898328
+      },
+      "word_error_rate": 0.5,
+      "expected_topic": "ask_python",
+      "actual_record": "en_ask_python-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Have you built something using Python? Please say yes or no.",
+      "citations": [
+        {
+          "record_id": "en_ask_python-1",
+          "source": "sources/en_ask_python.csv#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "python"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Yes, I use Python.",
+      "asr": {
+        "text": "Yes, I use Python.",
+        "confidence": 0.546,
+        "segments": [
+          {
+            "text": "Yes, I use Python.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.6046380466885037,
+            "no_speech_prob": 0.008178905583918095
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 652.3245999997016
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "ask_hours",
+      "actual_record": "en_ask_hours-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "How many hours per week could you spend on this demo internship?",
+      "citations": [
+        {
+          "record_id": "en_ask_hours-1",
+          "source": "sources/en_ask_hours.pdf#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "hours"
+    },
+    {
+      "speaker": "customer",
+      "reference": "I am not sure about my hours.",
+      "asr": {
+        "text": "I am not sure about my eyes.",
+        "confidence": 0.653,
+        "segments": [
+          {
+            "text": "I am not sure about my eyes.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.42620252479206433,
+            "no_speech_prob": 0.0257610734552145
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 621.5735000005225
+      },
+      "word_error_rate": 0.143,
+      "expected_topic": "incomplete",
+      "actual_record": "en_incomplete-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "That is fine. I will leave your availability unconfirmed. You can give a number of hours or ask for a human.",
+      "citations": [
+        {
+          "record_id": "en_incomplete-1",
+          "source": "sources/en_incomplete.html#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "hours"
+    },
+    {
+      "speaker": "customer",
+      "reference": "I can work thirty hours.",
+      "asr": {
+        "text": "I can work 30 hours.",
+        "confidence": 0.738,
+        "segments": [
+          {
+            "text": "I can work 30 hours.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.3041636149088542,
+            "no_speech_prob": 0.023045696318149567
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 625.2226000069641
+      },
+      "word_error_rate": 0.2,
+      "expected_topic": "qualified",
+      "actual_record": "en_qualified-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Your answers meet the demo screening rules. This is only a preliminary match, not a selection or job offer. A human must review your project and availability.",
+      "citations": [
+        {
+          "record_id": "en_qualified-1",
+          "source": "sources/en_qualified.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "complete"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Actually, I can work ten hours.",
+      "asr": {
+        "text": "Actually, I can work 10 hours.",
+        "confidence": 0.629,
+        "segments": [
+          {
+            "text": "Actually, I can work 10 hours.",
+            "start": 0.0,
+            "end": 2.8,
+            "avg_logprob": -0.46336271546103736,
+            "no_speech_prob": 0.007361650932580233
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 656.2203999928897
+      },
+      "word_error_rate": 0.167,
+      "expected_topic": "conflict",
+      "actual_record": "en_conflict-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "That differs from your earlier answer. Should I replace it with the new number of hours? Please say yes or no.",
+      "citations": [
+        {
+          "record_id": "en_conflict-1",
+          "source": "sources/en_conflict.csv#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "confirm_hours"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Yes, that is correct.",
+      "asr": {
+        "text": "Yes, that is correct.",
+        "confidence": 0.663,
+        "segments": [
+          {
+            "text": "Yes, that is correct.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.41127056545681423,
+            "no_speech_prob": 0.01102527603507042
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 628.4218999935547
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "not_qualified",
+      "actual_record": "en_not_qualified-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Your answers do not currently meet the demo screening rules. I will leave the final decision to a human reviewer.",
+      "citations": [
+        {
+          "record_id": "en_not_qualified-1",
+          "source": "sources/en_not_qualified.html#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "complete"
+    }
+  ],
+  "actions": [
+    {
+      "type": "screening_summary",
+      "mock": true,
+      "preliminary_match": false,
+      "hours": 10,
+      "python": true,
+      "final_decision": "human_reviewer"
+    }
+  ]
+}

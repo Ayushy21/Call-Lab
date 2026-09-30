@@ -1,0 +1,173 @@
+{
+  "kind": "synthetic TTS customer -> real local ASR -> real agent -> TTS reply; not a human call",
+  "market": "id",
+  "regional_accent": "Not tested; Indonesian colloquial words use a standard synthetic voice.",
+  "rows": [
+    {
+      "speaker": "agent",
+      "text": "Selamat pagi. Saya asisten AI untuk demo pembiayaan Nusantara yang fiktif. Ini bukan tagihan sungguhan. Boleh saya lanjutkan pengingat cicilan dalam demo ini?",
+      "citations": [
+        {
+          "record_id": "id_intro-1",
+          "source": "sources/id_intro.txt#chunk-1",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "reference": "Iya, monggo.",
+      "asr": {
+        "text": "iya, mongo",
+        "confidence": 0.543,
+        "segments": [
+          {
+            "text": "iya, mongo",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.6115006133913994,
+            "no_speech_prob": 0.02010461874306202
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 648.2442999986233
+      },
+      "word_error_rate": 0.5,
+      "expected_topic": "product",
+      "actual_record": "id_product-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Dalam akun contoh, angsuran lima ratus ribu rupiah jatuh tempo tanggal lima belas Oktober dua ribu dua puluh enam. Tenor contoh adalah dua belas bulan. Dalam layanan sungguhan, identitas harus diperiksa sebelum rincian akun dibahas.",
+      "citations": [
+        {
+          "record_id": "id_product-1",
+          "source": "sources/id_product.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Saya belum bisa bayar, cicilannya berat.",
+      "asr": {
+        "text": "Saya belum bisa bayar, cijilannya berat.",
+        "confidence": 0.618,
+        "segments": [
+          {
+            "text": "Saya belum bisa bayar, cijilannya berat.",
+            "start": 0.0,
+            "end": 3.0,
+            "avg_logprob": -0.4815210588276386,
+            "no_speech_prob": 0.00988947693258524
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 690.9110999986297
+      },
+      "word_error_rate": 0.167,
+      "expected_topic": "objection",
+      "actual_record": "id_objection-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Baik, saya paham cicilannya sedang terasa berat. Saya bisa mencatat permintaan bantuan petugas. Saya tidak bisa menjanjikan perubahan tenor atau penghapusan denda.",
+      "citations": [
+        {
+          "record_id": "id_objection-1",
+          "source": "sources/id_objection.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Mas, ora iso bayar sekarang.",
+      "asr": {
+        "text": "Mas, orai SO bayar sekarang.",
+        "confidence": 0.522,
+        "segments": [
+          {
+            "text": "Mas, orai SO bayar sekarang.",
+            "start": 0.0,
+            "end": 2.4,
+            "avg_logprob": -0.650602251291275,
+            "no_speech_prob": 0.0007916103932075202
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 649.2121999908704
+      },
+      "word_error_rate": 0.4,
+      "expected_topic": "objection",
+      "actual_record": "id_fallback-1",
+      "passed": false
+    },
+    {
+      "speaker": "agent",
+      "text": "Maaf, informasi itu belum tersedia di aturan demo. Saya bisa mencatat permintaan agar petugas membantu.",
+      "citations": [
+        {
+          "record_id": "id_fallback-1",
+          "source": "sources/id_fallback.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Telepon lagi besok saja.",
+      "asr": {
+        "text": "Telepon lagi besok saja.",
+        "confidence": 0.792,
+        "segments": [
+          {
+            "text": "Telepon lagi besok saja.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.2325727181001143,
+            "no_speech_prob": 0.00014321775233838707
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "id",
+        "asr_ms": 665.8058000029996
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "callback",
+      "actual_record": "id_callback-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Baik, permintaan telepon ulang dicatat dalam demo. Petugas perlu memastikan tanggal, jam, dan zona waktu: WIB, WITA, atau WIT. Ini belum menjadi jadwal sungguhan.",
+      "citations": [
+        {
+          "record_id": "id_callback-1",
+          "source": "sources/id_callback.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "discussion"
+    }
+  ],
+  "actions": [
+    {
+      "type": "callback_request",
+      "mock": true,
+      "status": "time_requires_human_confirmation"
+    }
+  ]
+}

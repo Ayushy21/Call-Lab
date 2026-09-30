@@ -1,0 +1,173 @@
+{
+  "kind": "synthetic TTS customer -> real local ASR -> real agent -> TTS reply; not a human call",
+  "market": "en",
+  "regional_accent": null,
+  "rows": [
+    {
+      "speaker": "agent",
+      "text": "This is a demo AI assistant for the fictional PracticeWorks internship. This is not a real job offer. May I ask two screening questions? Your answers stay in this local session.",
+      "citations": [
+        {
+          "record_id": "en_intro-1",
+          "source": "sources/en_intro.txt#chunk-1",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "reference": "Yes, okay.",
+      "asr": {
+        "text": "Yes, ok.",
+        "confidence": 0.487,
+        "segments": [
+          {
+            "text": "Yes, ok.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.7193345853260585,
+            "no_speech_prob": 0.048160165548324585
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 667.0923999918159
+      },
+      "word_error_rate": 0.5,
+      "expected_topic": "ask_python",
+      "actual_record": "en_ask_python-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Have you built something using Python? Please say yes or no.",
+      "citations": [
+        {
+          "record_id": "en_ask_python-1",
+          "source": "sources/en_ask_python.csv#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "python"
+    },
+    {
+      "speaker": "customer",
+      "reference": "I am a beginner with no experience.",
+      "asr": {
+        "text": "I am a beginner with no experience.",
+        "confidence": 0.672,
+        "segments": [
+          {
+            "text": "I am a beginner with no experience.",
+            "start": 0.0,
+            "end": 2.8,
+            "avg_logprob": -0.39747861298647796,
+            "no_speech_prob": 0.012627755291759968
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 666.7646999994759
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "objection",
+      "actual_record": "en_objection-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "For this demo, a personal Python project can count. Prior employment is not required. A human will review the project; passing these questions does not promise selection.",
+      "citations": [
+        {
+          "record_id": "en_objection-1",
+          "source": "sources/en_objection.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "python"
+    },
+    {
+      "speaker": "customer",
+      "reference": "What is the weather on Mars?",
+      "asr": {
+        "text": "What is the weather on Mars?",
+        "confidence": 0.747,
+        "segments": [
+          {
+            "text": "What is the weather on Mars?",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.2921218782663345,
+            "no_speech_prob": 0.005973074585199356
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 636.9460999994772
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "fallback",
+      "actual_record": "en_fallback-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "I do not have approved information for that question. I can note a request for a human to help.",
+      "citations": [
+        {
+          "record_id": "en_fallback-1",
+          "source": "sources/en_fallback.html#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "python"
+    },
+    {
+      "speaker": "customer",
+      "reference": "I want to speak to a human.",
+      "asr": {
+        "text": "I want to speak to a human.",
+        "confidence": 0.763,
+        "segments": [
+          {
+            "text": "I want to speak to a human.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.27111053466796875,
+            "no_speech_prob": 0.009092595428228378
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 642.5878000009106
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "human",
+      "actual_record": "en_human-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "I have noted a request for human help in this local demo. No real person has been called or connected.",
+      "citations": [
+        {
+          "record_id": "en_human-1",
+          "source": "sources/en_human.csv#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "python"
+    }
+  ],
+  "actions": [
+    {
+      "type": "human_escalation",
+      "mock": true,
+      "status": "requested_not_connected"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "kind": "synthetic TTS customer -> real local ASR -> real agent -> TTS reply; not a human call",
+  "market": "en",
+  "regional_accent": null,
+  "rows": [
+    {
+      "speaker": "agent",
+      "text": "This is a demo AI assistant for the fictional PracticeWorks internship. This is not a real job offer. May I ask two screening questions? Your answers stay in this local session.",
+      "citations": [
+        {
+          "record_id": "en_intro-1",
+          "source": "sources/en_intro.txt#chunk-1",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "reference": "Yes, okay.",
+      "asr": {
+        "text": "Yes, ok.",
+        "confidence": 0.487,
+        "segments": [
+          {
+            "text": "Yes, ok.",
+            "start": 0.0,
+            "end": 2.0,
+            "avg_logprob": -0.7193345853260585,
+            "no_speech_prob": 0.048160165548324585
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 1927.0535000105156
+      },
+      "word_error_rate": 0.5,
+      "expected_topic": "ask_python",
+      "actual_record": "en_ask_python-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Have you built something using Python? Please say yes or no.",
+      "citations": [
+        {
+          "record_id": "en_ask_python-1",
+          "source": "sources/en_ask_python.csv#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "python"
+    },
+    {
+      "speaker": "customer",
+      "reference": "Yes, I built a Python project.",
+      "asr": {
+        "text": "Yes, I built a python project.",
+        "confidence": 0.629,
+        "segments": [
+          {
+            "text": "Yes, I built a python project.",
+            "start": 0.0,
+            "end": 3.0,
+            "avg_logprob": -0.46386312354694714,
+            "no_speech_prob": 0.008613999001681805
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 649.6828999952413
+      },
+      "word_error_rate": 0.0,
+      "expected_topic": "ask_hours",
+      "actual_record": "en_ask_hours-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "How many hours per week could you spend on this demo internship?",
+      "citations": [
+        {
+          "record_id": "en_ask_hours-1",
+          "source": "sources/en_ask_hours.pdf#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "hours"
+    },
+    {
+      "speaker": "customer",
+      "reference": "I can spend twenty five hours each week.",
+      "asr": {
+        "text": "I can spend 25 hours each week.",
+        "confidence": 0.672,
+        "segments": [
+          {
+            "text": "I can spend 25 hours each week.",
+            "start": 0.0,
+            "end": 3.04,
+            "avg_logprob": -0.39741724729537964,
+            "no_speech_prob": 0.010409297421574593
+          }
+        ],
+        "provider": "local",
+        "model": "base",
+        "language": "en",
+        "asr_ms": 694.6192999894265
+      },
+      "word_error_rate": 0.25,
+      "expected_topic": "qualified",
+      "actual_record": "en_qualified-1",
+      "passed": true
+    },
+    {
+      "speaker": "agent",
+      "text": "Your answers meet the demo screening rules. This is only a preliminary match, not a selection or job offer. A human must review your project and availability.",
+      "citations": [
+        {
+          "record_id": "en_qualified-1",
+          "source": "sources/en_qualified.txt#chunk-1",
+          "version": "1.0"
+        }
+      ],
+      "stage": "complete"
+    }
+  ],
+  "actions": [
+    {
+      "type": "screening_summary",
+      "mock": true,
+      "preliminary_match": true,
+      "hours": 25,
+      "python": true,
+      "final_decision": "human_reviewer"
+    }
+  ]
+}
